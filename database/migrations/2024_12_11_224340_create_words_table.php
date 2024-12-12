@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('words', function (Blueprint $table) {
             $table->id();
             $table->string('word');
+            $table->boolean('animal')->default(false);
+            $table->boolean('car')->default(false);
+            $table->boolean('airplane')->default(false);
+            $table->boolean('boat')->default(false);
             $table->timestamps();
         });
     }

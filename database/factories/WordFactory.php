@@ -4,6 +4,8 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+use function Laravel\Prompts\select;
+
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Word>
  */
@@ -17,7 +19,8 @@ class WordFactory extends Factory
     public function definition(): array
     {
         return [
-        'word'=>fake()->word()
+        'word'=>fake()->word(),
+
         ];
     }
 }

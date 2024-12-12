@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Word;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Eloquent\Factories\Sequence;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,6 +22,6 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Word::factory()->count(220)->create();
+        Word::factory()->count(220)->state(new Sequence(['boat' => false], ['boat' =>true],['car' => false], ['car' =>true],['airplane' => false], ['airplane' =>true],['animal' => false], ['animal' =>true]))->create();
     }
 }
